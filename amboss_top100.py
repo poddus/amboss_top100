@@ -114,7 +114,10 @@ top100 = [
 time.sleep(5)
 for x in top100:
     keyboard.type(x)
-    time.sleep(0.2)
-    mouse.press(pynput.mouse.Button.left)
-    time.sleep(0.2)
+    time.sleep(1)
+    mouse.click(pynput.mouse.Button.left)
+    time.sleep(0.5)
+    with keyboard.pressed(pynput.keyboard.Key.shift):
+        keyboard.press(pynput.keyboard.Key.tab)
+        keyboard.release(pynput.keyboard.Key.tab)
 
