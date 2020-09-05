@@ -1,9 +1,12 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# the commented-out topics don't result in the expected chapter and need to be put in manually
-import keyboard
 import time
+import pynput
+
+keyboard = pynput.keyboard.Controller()
+
+mouse = pynput.mouse.Controller()
 
 top100 = [
     "Diabetes mellitus",
@@ -108,112 +111,10 @@ top100 = [
     "Gesetzliche Unfallversicherung"
 ]
 
-top100search = [
-    "mellitus",
-    "Mammakarzinom",
-    "Lungenkarzinom",
-    "Schlaganfall",
-    "Ovarialtumoren",
-    "Divertikulitis",
-    "Kolorektales",
-    "Meningitis",
-    "Pneumonie",
-    "Crohn",
-    "Lungenembolie",
-    "Hypertonie",
-    "Anorexia",
-    "Allergische",
-    "Pneumothorax",
-    "Zytostatika",
-    "Multiple",
-    "Bandscheibenprolaps",
-    "Vigilanzminderung",
-    "Phlebothrombose",
-    "Herzinsuffizienz",
-    "Myokardinfarkt",
-    "Nosokomiale",
-    "Tuberkulose",
-    "Vorhofflimmern",
-    "Epilepsie",
-    "Depression",
-    "Knochentumoren",
-    "Anpassungsstörungen",
-    "Hyperthyreose",
-    "Riesenzellarteriitis",
-    # "Verschlusskrankheit",
-    "Angeborene ",
-    "Rettungsablauf",
-    "Lyme-Borreliose",
-    "Antidepressiva",
-    "Rheumatoide",
-    "HIV",
-    "Reanimation",
-    "Sepsis",
-    "Leberzirrhose",
-    "Endokarditis",
-    "Weichteilläsionen",
-    "obstruktive",
-    "Sarkoidose",
-    "Psychopathologischer",
-    "Magenkarzinom",
-    "Antibiotika",
-    "Leukämien",
-    "Impotenz",
-    "Pankreaskarzinom",
-    "Asthma",
-    "Neurologische",
-    "Appendizitis",
-    # "Hepatitis B",
-    "Subarachnoidalblutung",
-    "Antipsychotika",
-    "Mononukleose",
-    "Cholelithiasis",
-    "Perthes",
-    # "Psoriasis",
-    # "Parkinson-Syndrom",
-    "Wahrscheinlichkeiten",
-    "Studientypen",
-    "Schock",
-    "Nicht-orale",
-    "Krankenversicherung",
-    "Niereninsuffizienz",
-    "Juvenile",
-    "Nebennierenrindeninsuffizienz",
-    "Urolithiasis",
-    "Angststörungen",
-    "Endometriose",
-    "Immunsuppressiva",
-    "Osteoporose",
-    "Wirbelkörperfraktur",
-    "Kindesmisshandlung",
-    "Alkohol",
-    "Ärztliche",
-    "Gynäkologie",
-    "Psychotherapeutische",
-    "Cushing-Syndrom",
-    "Allgemeinanästhesie",
-    "Bechterew",
-    "Systemischer",
-    "Glutensensitive",
-    "Pankreatitis",
-    "Alzheimer",
-    "Urothelkarzinom",
-    "Tiefgreifende",
-    "Strangulation",
-    "Antidiabetika",
-    "Influenza",
-    "Nierenzellkarzinom",
-    "Guillain-Barré-Syndrom",
-    "Hyperurikämie",
-    "Wundbehandlung",
-    "Halogenkohlenwasserstoffe",
-    "Prävention",
-    "Unfallversicherung",
-]
-
 time.sleep(5)
-for x in top100search:
-    keyboard.write(x)
+for x in top100:
+    keyboard.type(x)
     time.sleep(0.2)
-    keyboard.press_and_release('return')
+    mouse.press(pynput.mouse.Button.left)
     time.sleep(0.2)
+
