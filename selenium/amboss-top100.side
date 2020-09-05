@@ -1,0 +1,68 @@
+{
+  "id": "798add2a-fccf-45e3-b921-7e5bcced8085",
+  "version": "2.0",
+  "name": "amboss-top100",
+  "url": "https://next.amboss.com/de/customsession",
+  "tests": [{
+    "id": "eb33e041-8672-466d-8229-f130b8625e1b",
+    "name": "init",
+    "commands": [{
+      "id": "e89dd403-a74a-4f0f-add7-8513fd910052",
+      "comment": "",
+      "command": "open",
+      "target": "https://next.amboss.com/de/customsession",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "94327cb2-1b5a-4aab-9aab-23327150b268",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x1376",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9d362280-c03f-43cb-a1be-7a206264acd7",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@data-e2e-test-id=\"checkbox-Kapitel\"]/div",
+      "targets": [
+        ["css=.rowContainer-3893932555:nth-child(99)", "css:finder"],
+        ["xpath=//div[@id='MODAL-TARGET-ID']/div/div/div[2]/div[4]/div/div/div[99]", "xpath:idRelative"],
+        ["xpath=//div[99]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "01d792ed-b6ae-47fb-b314-60c8e186fe65",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@data-e2e-test-id=\"row-Klinische & ärztliche Kapitel\"]/div[3]",
+      "targets": [
+        ["css=.rowContainer-3893932555:nth-child(99)", "css:finder"],
+        ["xpath=//div[@id='MODAL-TARGET-ID']/div/div/div[2]/div[4]/div/div/div[99]", "xpath:idRelative"],
+        ["xpath=//div[99]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6189600c-3586-495a-a59e-1b87f441db4c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@data-e2e-test-id=\"row-Diabetes mellitus\"]/div[3]/span",
+      "targets": [
+        ["css=.rowContainer-3893932555:nth-child(99)", "css:finder"],
+        ["xpath=//div[@id='MODAL-TARGET-ID']/div/div/div[2]/div[4]/div/div/div[99]", "xpath:idRelative"],
+        ["xpath=//div[99]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "801188e3-b43e-4de3-be81-b742709fd340",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://next.amboss.com/", "https://next.amboss.com/de/customsession"],
+  "plugins": []
+}

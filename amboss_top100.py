@@ -8,6 +8,16 @@ keyboard = pynput.keyboard.Controller()
 
 mouse = pynput.mouse.Controller()
 
+top100test = [
+    "Diabetes mellitus",
+    "Mammakarzinom",
+    "Lungenkarzinom",
+    "Ischämischer Schlaganfall",
+    "Ovarialtumoren",
+    "Divertikulose und Divertikulitis",
+    "Kolorektales Karzinom"
+]
+
 top100 = [
     "Diabetes mellitus",
     "Mammakarzinom",
@@ -113,11 +123,14 @@ top100 = [
 
 time.sleep(5)
 for x in top100:
-    keyboard.type(x)
-    time.sleep(1)
+    for char in x:
+        keyboard.type(char)
+        time.sleep(0.2)
+    time.sleep(7)
     mouse.click(pynput.mouse.Button.left)
-    time.sleep(0.5)
+    time.sleep(2)
     with keyboard.pressed(pynput.keyboard.Key.shift):
         keyboard.press(pynput.keyboard.Key.tab)
         keyboard.release(pynput.keyboard.Key.tab)
+    time.sleep(1)
 
