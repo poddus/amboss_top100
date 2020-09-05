@@ -126,4 +126,6 @@ class TestInit():
         self.driver.find_element(By.XPATH, "//div[@data-e2e-test-id=\"row-Gesetzliche Unfallversicherung\"]/div[3]/span").click()
 
 
+TestInit.setup_method()
 TestInit.test_init()
+TestInit.teardown_method()
